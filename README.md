@@ -9,7 +9,7 @@ This rository is in no way affiliated with the the azahar-emulator. If you're lo
 Clone the repository or download the zip.
 You can choose to build a docker image that you will use to host a room in two way:
 
-- **Use the cotents of `docker_with_room_exe`**: low effort to start end maintain. Just build the image and run the container. Some things will not persist when removing the container and some customizations will need you sto redeploy the containers
+- **Use the cotents of `docker_with_room_exe`**: low effort to start end maintain. Just build the image and run the container. Some things will not persist when removing the container and some customizations will need you redeploy the containers
 - **Use the contents of `docker_with_script`**: requires to customize the template scripts and map some volumes in the container. To customize the settings of the rooms it's enough to edit some of the files and restart the container. By default, it save the logs to persistent sorage.
 
 Note that the azahar-room executable will run as root inside the container. This is not a best practice and it will be changed in the near future.
