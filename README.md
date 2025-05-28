@@ -64,3 +64,4 @@ Note that the azahar-room executable will run as root inside the container. This
    ```
 7. If you want to save the docker run command, rdit the file you just created with the proper values. Follow the directions in the file.
 8. If you followed the step above, run the script you just edited or else tun the docker run command manually.
+9. (Optional) Edit the files in `/opt/game/server/emu-rooms` to set a message and/or a maintenance window notice
