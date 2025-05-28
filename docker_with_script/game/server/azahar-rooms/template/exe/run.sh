@@ -38,6 +38,8 @@ banlist="/opt/azahar/banlist/bannedlist.txt"
 #Overrides previous variables with the one contained in this file
 source /opt/azahar_conf_overrides
 
+mkdir -p /opt/azahar/logs
+
 $HOME/azahar-room \
 	--room-name "$room_name" \
 	--preferred-app "$game" \
