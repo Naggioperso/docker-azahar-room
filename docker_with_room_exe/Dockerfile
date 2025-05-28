@@ -18,7 +18,6 @@ RUN /root/scripts/compile-azahar.sh
 #    && rm -rf /root/scripts
 
 FROM ubuntu:$UBUNTU_RELEASE AS final
-COPY --from=builder /root/azahar-rooms/source/build/bin/Release/azahar-room /root/
 RUN apt update && DEBIAN_FRONTEND=noninteractive apt full-upgrade -y \
     && apt install libc++-dev -y \
     && apt-get clean -y \
