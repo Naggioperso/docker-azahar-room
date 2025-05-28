@@ -53,14 +53,14 @@ Note that the azahar-room executable will run as root inside the container. This
    cd /opt/game/server/azahar-rooms
    ````
 4. Create a copy of the files in the template folder
-```
-cp -r template name-of-the-container # Change it according to your preferences
-```
+   ```
+   cp -r template name-of-the-container # Change it according to your preferences
+   ```
 5. Edit the `run.sh` in the folder `name-of-the-container/exe/` that you just created. Follow the directions in the script
 6. Change the directory and create a copy of the script to spawn a container
-```
-cd /opt/game/server/azahar-rooms/docker_init
-cp template name-of-the-container
-```
+   ```
+   cd /opt/game/server/azahar-rooms/docker_init
+   cp template name-of-the-container
+   ```
 7. If you want to save the docker run command, rdit the file you just created with the proper values. Follow the directions in the file.
 8. If you followed the step above, run the script you just edited or else tun the docker run command manually.
