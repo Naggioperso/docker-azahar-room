@@ -1,9 +1,14 @@
 #!/bin/bash
 
-docker run -d -p [listening port]/udp \
-    --name [container name] \
+# Don't keep "[ ]".
+# "listening-port" must be the same as the one set in the "run.sh" for this container
+# "container-name" must be consistent with the one used for the directory containing the "exe/run.sh" of this container
+# "container-image" must be the name of the image you built
+
+docker run -d -p [listening-port]/udp \
+    --name [container-name] \
     -v /opt/game/server/azahar-rooms/[container name]:/opt/azahar \
     -v /opt/game/server/emu-rooms/motd:/opt/motd \
     -v /opt/game/server/emu-rooms/next_maintenance:/opt/next_maintenance \
     -v /opt/game/server/emu-rooms/azahar_conf_overrides:/opt/azahar_conf_overrides \
-    --restart unless-stopped [container image]
+    --restart unless-stopped [container-image]
