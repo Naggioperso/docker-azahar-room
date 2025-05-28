@@ -22,7 +22,7 @@ Note that the azahar-room executable will run as root inside the container. This
 
    Example for a public room 
    ```
-   docker run -d -p 5000:5000 --name your-container-name your-docker-image-name \
+   docker run -d -p 5000:5000/udp --name your-container-name your-docker-image-name \
        --room-name "Room name" \
        --preferred-app "Name of the preferred game" \
        --preferred-app-id "ID of the preferred game" \
@@ -34,7 +34,7 @@ Note that the azahar-room executable will run as root inside the container. This
 
    Example for a private room
    ```
-     docker run -d -p 5000:5000 --name your-container-name your-docker-image-name \
+     docker run -d -p 5000:5000/udp --name your-container-name your-docker-image-name \
        --room-name "Room name" \
        --preferred-app "Name of the preferred game" \
        --preferred-app-id "ID of the preferred game" \
