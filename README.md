@@ -27,7 +27,7 @@ Note that the azahar-room executable will run as root inside the container. This
        --preferred-app "Name of the preferred game" \
        --preferred-app-id "ID of the preferred game" \
        --port 5000 \
-       --max_members 24
+       --max_members 24 \
        --token "Random user token" \
        --web-api-url "API server"
    ```
