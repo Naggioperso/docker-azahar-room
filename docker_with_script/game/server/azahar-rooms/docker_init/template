@@ -1,0 +1,9 @@
+#!/bin/bash
+
+docker run -d -p [listening port]/udp \
+    --name [container name] \
+    -v /opt/game/server/azahar-rooms/[container name]:/opt/azahar \
+    -v /opt/game/server/emu-rooms/motd:/opt/motd \
+    -v /opt/game/server/emu-rooms/next_maintenance:/opt/next_maintenance \
+    -v /opt/game/server/emu-rooms/azahar_conf_overrides:/opt/azahar_conf_overrides \
+    --restart unless-stopped [container image]

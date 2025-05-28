@@ -1,0 +1,7 @@
+# Insert custom value here. Every script that start the room will source this file, overriding duplicate variables with the one in this file
+#
+# Be carefull! Setting a variable here will apply the changes to all the rooms running via the external scripts.
+# Changes to a running room will be applied when restarted.
+# As an example the following variable will override the one that define the max number of members and set it to 4 for all the rooms.
+#
+# members=4
