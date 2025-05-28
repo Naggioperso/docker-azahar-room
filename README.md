@@ -29,18 +29,18 @@ Note that the azahar-room executable will run as root inside the container. This
        --port 5000 \
        --max_members 24
        --token "Random user token" \
-       --web-api-url "API server"       
+       --web-api-url "API server"
    ```
 
-  Example for a private room
-  ```
+   Example for a private room
+   ```
      docker run -d -p 5000:5000 --name your-container-name your-docker-image-name \
        --room-name "Room name" \
        --preferred-app "Name of the preferred game" \
        --preferred-app-id "ID of the preferred game" \
        --port 5000 \
        --max_members 24
-```
+   ```
 
 ### Room hosting with Docker image built with `docker_with_script`
 
