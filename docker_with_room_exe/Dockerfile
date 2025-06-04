@@ -14,15 +14,12 @@ RUN apt-get update \
     && apt install -y sudo \
     && /root/scripts/requirements-install.sh \
     && /root/scripts/get-azahar-latest.sh
-#    && apt-get clean -y #\
-#    && rm -rf /var/lib/apt/lists/*
+
 
 # Stage to start the build of the executable
 FROM builder-prep AS builder
 RUN /root/scripts/compile-azahar.sh
-#\
-#    && find / -name azahr-room -type f \
-#    && rm -rf /root/scripts
+
 
 # Stage to prepare the environment in wich the executable of the room will be running
 FROM ubuntu:$UBUNTU_RELEASE AS final
