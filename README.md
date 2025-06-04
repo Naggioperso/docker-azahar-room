@@ -2,7 +2,7 @@
 
 ## Disclaimer
 
-This rository is in no way affiliated with the the azahar-emulator. If you're looking for the emulator check: https://github.com/azahar-emu/azahar
+This repository is in no way affiliated with the the azahar-emulator. If you're looking for the emulator check: https://github.com/azahar-emu/azahar
 
 ## How it works
 
