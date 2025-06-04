@@ -18,12 +18,13 @@ REPO_OWNER="azahar-emu"
 REPO_NAME="azahar"
 
 
-# The following is needed to identify the tag of the release marked as "Latest" and then build URL to download the tarball.
+# The following is needed to identify the tag of the release marked as "Latest" and then build the URL to download the tarball.
+#
 # First, fetch the latest release tag
 LATEST_RELEASE_TAG=$(curl -s "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/releases/latest" | grep -oP '"tag_name": "\K[^"]+')
 
 
-# Second, build the URL to the page of the latest release. Here, we can find the ece for the different OS and the source code tarball
+# Second, build the URL to the page of the latest release. Here, we can find the ecexecutables for the different OS and the source code tarball
 RELEASE_URL="https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/releases/tags/$LATEST_RELEASE_TAG"
 
 
