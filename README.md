@@ -12,7 +12,7 @@ You can choose to build a docker image that you will use to host a room in two w
 - **Use the cotents of `docker_with_room_exe`**: low effort to start end maintain. Just build the image and run the container. Some things will not persist when removing the container and some customizations will need you redeploy the containers
 - **Use the contents of `docker_with_script`**: requires to customize the template scripts and map some volumes in the container. To customize the settings of the rooms it's enough to edit some of the files and restart the container. By default, it save the logs to persistent sorage.
 
-Note that the azahar-room executable will run as root inside the container. This is not a best practice and it will be changed in the near future.
+Note that the azahar-room executable will run as root inside the container built with `docker_with_script`. This is not a best practice and it will be changed in the near future.
 
 ---
 #### Room hosting with Docker image built with `docker_with_room_exe`
