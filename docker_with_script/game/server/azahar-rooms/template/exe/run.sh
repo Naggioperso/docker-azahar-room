@@ -40,7 +40,7 @@ source /opt/azahar_conf_overrides
 
 mkdir -p /opt/azahar/logs
 
-$HOME/azahar-room \
+/app/azahar-room \
 	--room-name "$room_name" \
 	--preferred-app "$game" \
 	--preferred-app-id "$game_id" \
