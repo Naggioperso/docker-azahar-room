@@ -34,7 +34,7 @@ Note that the azahar-room executable will run as root inside the container built
 
    Example for a private room
    ```
-     docker run -d -p 5000:5000/udp --name your-container-name your-docker-image-name \
+   docker run -d -p 5000:5000/udp --name your-container-name your-docker-image-name \
        --room-name "Room name" \
        --preferred-app "Name of the preferred game" \
        --preferred-app-id "ID of the preferred game" \
@@ -65,3 +65,12 @@ Note that the azahar-room executable will run as root inside the container built
 7. If you want to save the docker run command, rdit the file you just created with the proper values. Follow the directions in the file.
 8. If you followed the step above, run the script you just edited or else tun the docker run command manually.
 9. (Optional) Edit the files in `/opt/game/server/emu-rooms` to set a message and/or a maintenance window notice
+10. Give read and write permizzions to the user that will run `azahar-room`. By default the user is created as it follows during the build of the image:
+
+    > uid=3000(azahar-user) gid=3000(azahar-group) groups=3000(azahar-group)
+
+      Run the following command. If you change the any ID or user/group name, change it accordingly
+      ```
+      chown --recursive 3000:3000 /opt/game/server/azahar-rooms
+      chown --recursive 3000:3000 /opt/game/server/aemu-rooms
+      ```
