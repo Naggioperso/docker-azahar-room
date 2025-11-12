@@ -45,7 +45,7 @@ You can choose to build a docker image that you will use to host a room in two w
 *** To make sure that everythings work, keep "_name-of-the-container_" consistent in all configurations ***
 
 1. Build the Docker image
-2. Qopy the content of the `game` folder in `docker_with_script` inside `/opt`
+2. Copy the content of the `game` folder in `docker_with_script` inside `/opt`
 3. Change the working directory to `/opt/game/server/azahar-rooms`
    ```
    cd /opt/game/server/azahar-rooms
@@ -60,7 +60,7 @@ You can choose to build a docker image that you will use to host a room in two w
    cd /opt/game/server/azahar-rooms/docker_init
    cp template name-of-the-container
    ```
-7. If you want to save the docker run command, rdit the file you just created with the proper values. Follow the directions in the file.
+7. If you want to save the docker run command, edit the file you just created with the proper values. Follow the directions in the file.
 8. If you followed the step above, run the script you just edited or else tun the docker run command manually.
 9. (Optional) Edit the files in `/opt/game/server/emu-rooms` to set a message and/or a maintenance window notice
 10. Give read and write permizzions to the user that will run `azahar-room`. By default the user is created as it follows during the build of the image:
@@ -70,5 +70,5 @@ You can choose to build a docker image that you will use to host a room in two w
       Run the following command. If you change the any ID or user/group name, change it accordingly
       ```
       chown --recursive 3000:3000 /opt/game/server/azahar-rooms
-      chown --recursive 3000:3000 /opt/game/server/aemu-rooms
+      chown --recursive 3000:3000 /opt/game/server/emu-rooms
       ```
